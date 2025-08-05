@@ -9,18 +9,22 @@ public class Que2 {
 /*int型の変数scoreに75を代入
  * ageが60以上なら"合格です！"と表示		
  */
-  int score = 75;if (score >= 60);
+  int score = 75;
+  
+  if (score >= 60);{
   System.out.println("合格です！");
+  }
  
  /*int型の変数ageに25を代入
   *ageが20以上30以下なら"適正年齢です"と表示
   *それ以外なら"対象外です"と表示
   */
   int age = 25;
-  if (age >= 20 && age <= 30)
+  if (age >= 20 && age <= 30) {
   System.out.println("適正年齢です");
-  else if (age < 20 || age > 30)
+  }else if (age < 20 || age > 30) {
   System.out.println("対象外です");
+  }
   
  /*int型の変数ageに18を代入
   * ageが20以上なら"成人です"と表示
@@ -28,12 +32,14 @@ public class Que2 {
   * ageが12以下なら"子供です"と表示
   */
   int age2 = 18;
-  if (age2 >= 20)
+  if (age2 >= 20) {
 	  System.out.println("成人です");
-  else if (age2 >=13 && age2 <= 19)
+  }else if (age2 >=13 && age2 <= 19) {
 	  System.out.println("ティーンエイジャーです");
-  else if (age2 <= 12)
+  }else if (age2 <= 12) {
 	  System.out.println("子供です");
+  }
+  
   
   /*int型の変数x,y,zに30,15,50を代入
    * 一番大きい数値を判定して表示
@@ -41,7 +47,15 @@ public class Que2 {
   int x = 30;
   int y = 15;
   int z = 50;
-  int max = (x > y) ? ((x > z) ? x : z) : (( y > z ) ? y : z);
+  int max;
+  if (x >= y && x >= z) {
+	  max = x;
+  } else if (y >= x && y >= z){
+	  max = y;
+  } else {
+	  max = z;	  
+  }
+	  
   System.out.println("最大値は" + max + "です");
   
   /*int型の変数numを用意
@@ -50,22 +64,24 @@ public class Que2 {
    * numの値が0より小さければ"負の数です"と表示
    */
   int num = -8;
-  if (num > 0)
+  if (num > 0) {
 	  System.out.println("正の数です");
-  else if (num == 0)
+  }else if (num == 0) {
 	  System.out.println("0です");
-  else
+  }else {
 	  System.out.println("負の数です");
+  }
   
   /*int型の変数numを用意
    * numが偶数なら"偶数です"と表示
    * numが奇数なら"奇数です"と表示
    */
   int num2 = 73;
-  if (num2 % 2 == 0)
+  if (num2 % 2 == 0) {
 	  System.out.println("偶数です");
-  else 
+  }else { 
       System.out.println("奇数です");
+  }
   
   /*int型の変数scoreに0から100の値を代入
    * 90以上なら"優"
