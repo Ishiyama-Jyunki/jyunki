@@ -16,7 +16,7 @@ public class Qes6 {
 			int cHand = cpu.chooseHand();
 			
 			if (pHand == cHand) {
-				System.out.println("あいこです。");
+				System.out.println("あいこです。もう一度！");
 			} else if ((pHand == 0 && cHand == 1) ||
 					   (pHand == 1 && cHand == 2) ||
 					   (pHand == 2 && cHand == 0)) {
