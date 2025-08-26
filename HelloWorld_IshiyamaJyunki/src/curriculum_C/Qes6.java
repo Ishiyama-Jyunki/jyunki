@@ -8,22 +8,22 @@ public class Qes6 {
 	public static void main(String[] args) {
 		Player player = new Player();
 		CPU cpu = new CPU();
-		
+
 		boolean win = false;
-		
+
 		while (!win) {
 			int pHand = player.chooseHand();
 			int cHand = cpu.chooseHand();
-			
+
 			if (pHand == cHand) {
 				System.out.println("あいこです。もう一度！");
 			} else if ((pHand == 0 && cHand == 1) ||
-					   (pHand == 1 && cHand == 2) ||
-					   (pHand == 2 && cHand == 0)) {
-				System.out.println("あなたの勝ち。");
+					(pHand == 1 && cHand == 2) ||
+					(pHand == 2 && cHand == 0)) {
+				System.out.println("あなたの勝ちです。");
 				win = true;
-			}else {
-				System.out.println("あなたの負け。");
+			} else {
+				System.out.println("あなたの負けです。勝つまでやりましょう！");
 			}
 		}
 		System.out.println("ゲームは終了しました。");
@@ -42,7 +42,7 @@ class Player {
 			return chooseHand();
 		}
 		System.out.println("あなたの手:" + hands[choice]);
-        return choice;
+		return choice;
 	}
 
 	public String getHandName(int hand) {
@@ -52,14 +52,14 @@ class Player {
 
 class CPU {
 	private Random random = new Random();
-	private String[] hands = {"グー","チョキ","パー"};
-	
+	private String[] hands = { "グー", "チョキ", "パー" };
+
 	public int chooseHand() {
 		int choice = random.nextInt(3);
 		System.out.println("CPUの手:" + hands[choice]);
 		return choice;
 	}
-	
+
 	public String getHandName(int hand) {
 		return hands[hand];
 	}

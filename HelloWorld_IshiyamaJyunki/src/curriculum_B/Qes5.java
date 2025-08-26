@@ -1,6 +1,5 @@
 package curriculum_B;
 
-import 課題.Greeting;
 
 public class Qes5 {
 
