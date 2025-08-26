@@ -5,11 +5,11 @@ interface Billable{
 	int costForDay(int hoursWorked);
 }
 
-abstract class newEmployee implements Billable{
+abstract class NewEmployee implements Billable{
 	protected final String id;
 	protected final String name;
 	
-	public newEmployee(String id, String name) {
+	public NewEmployee(String id, String name) {
 		this.id = id;
 		this.name = name;
 	}
@@ -20,7 +20,7 @@ abstract class newEmployee implements Billable{
 	}
 }
 
-class newFulltimeEmployee extends newEmployee{
+class newFulltimeEmployee extends NewEmployee{
 	public newFulltimeEmployee(String id, String name) {
 		super(id, name);
 	}
@@ -36,7 +36,7 @@ class newFulltimeEmployee extends newEmployee{
 	}
 }
 
-class newContractEmployee extends newEmployee{
+class newContractEmployee extends NewEmployee{
 	public newContractEmployee(String id, String name) {
 		super(id, name);
 		
