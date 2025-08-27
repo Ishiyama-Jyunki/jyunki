@@ -8,12 +8,12 @@ public class Qes6 {
 	public static void main(String[] args) {
 		Player player = new Player();
 		CPU cpu = new CPU();
-
+ 
 		boolean win = false;
-
+		
 		while (!win) {
-			int pHand = player.chooseHand();
-			int cHand = cpu.chooseHand();
+			int pHand = player.ChooseHand();
+			int cHand = cpu.ChooseHand();
 
 			if (pHand == cHand) {
 				System.out.println("あいこです。もう一度！");
@@ -27,19 +27,22 @@ public class Qes6 {
 			}
 		}
 		System.out.println("ゲームは終了しました。");
+	
+		player.closeScanner();
 	}
-}
+	}
+
 
 class Player {
 	private Scanner scanner = new Scanner(System.in);
 	private String[] hands = { "グー", "チョキ", "パー" };
 
-	public int chooseHand() {
+	public int ChooseHand() {
 		System.out.print("グー(0),チョキ(1),パー(2) 選んで入力:");
 		int choice = scanner.nextInt();
 		if (choice < 0 || choice > 2) {
 			System.out.println("0～2を入力してください");
-			return chooseHand();
+			return ChooseHand();
 		}
 		System.out.println("あなたの手:" + hands[choice]);
 		return choice;
@@ -48,13 +51,16 @@ class Player {
 	public String getHandName(int hand) {
 		return hands[hand];
 	}
+	public void closeScanner() {
+		scanner.close();
+	}
 }
 
 class CPU {
 	private Random random = new Random();
 	private String[] hands = { "グー", "チョキ", "パー" };
 
-	public int chooseHand() {
+	public int ChooseHand() {
 		int choice = random.nextInt(3);
 		System.out.println("CPUの手:" + hands[choice]);
 		return choice;
@@ -63,4 +69,5 @@ class CPU {
 	public String getHandName(int hand) {
 		return hands[hand];
 	}
-}
+	}
+

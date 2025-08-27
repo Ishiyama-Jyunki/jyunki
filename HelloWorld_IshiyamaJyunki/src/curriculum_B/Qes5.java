@@ -34,10 +34,9 @@ public class Qes5 {
 	 * 呼び出すようにしてください。
 	 * Greeting.java(別のクラス) sayHello()メソッドを持ち、”こんにちは！”を表示
 	 * Main.java GreetingクラスをインポートしてsayHello()を表示
+	 * →別クラスでGreeting.javaを作成
 	 */
-	public void sayHello() {
-		System.out.println("こんにちは！");
-	}
+	
 
 	/*
 	 次の2つのクラスを作成し、下記コンソールが出力されるように作成してください
